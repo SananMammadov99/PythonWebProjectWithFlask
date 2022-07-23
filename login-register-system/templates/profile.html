@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile</title>
+</head>
+<body>
+    <h1>Welcome {{username}}</h1>
+    <form action="/user/update/{{id}}" method="post">
+        <label for="username">New Username:</label>
+        <input type="text" name="username" id="username" value="{{username}}" required/> <br>
+        <label for="password">New Password:</label>
+        <input type="password" name="password" id="password" placeholder="******" required /> <br>
+        <input type="submit" value="Update">
+
+    </form>
+
+    <br>
+    <a href="/user/logout">Logout</a>
+    <br>
+    <h2>Delete my profile:</h2>
+    <form action="/user/delete/{{id}}" method="post">
+        <input type="submit" value="Delete" onclick="return confirm('Are you sure you would like to delete your profile');" >
+    </form>
+</body>
+</html>
