@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Items</title>
+</head>
+<body>
+    <h2>{{menu.name}}</h2>
+    <a href="/menu/{{menu.id}}/menu_item/new">New</a>    
+    <a href="/menu/{{menu.id}}/delete">Delete Menu</a>
+    <ul>
+        {% for item in menu_items %}
+            <li>{{ item.name }} <a href="/menu/{{menu.id}}/menu_item/{{item.id}}/delete">Delete</a></li>
+        {% endfor %}
+
+    </ul>
+
+</body>
+</html>
