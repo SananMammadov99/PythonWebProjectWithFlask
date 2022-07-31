@@ -105,18 +105,6 @@ def delete_menu_item(menu_id, menu_item_id):
     return redirect(url_for('menu_item', menu_id=menu_id))
 
 
-# edit menu
-@app.route('/menu/<int:menu_id>/edit', methods=['GET', 'POST'])
-def edit_menu(menu_id):
-    menu = Menu.query.get_or_404(menu_id)
-    if request.method == 'POST':
-        menu.name = request.form['name']
-        db.session.commit()
-        return redirect(url_for('menu'))
-    return render_template('edit_menu.html', menu=menu)
-    
-
-
 # update menu item
 @app.route('/menu/<int:menu_id>/menu_item/<int:menu_item_id>/edit', methods=['GET', 'POST'])
 def edit_menu_item(menu_id, menu_item_id):
