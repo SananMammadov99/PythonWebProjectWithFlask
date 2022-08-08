@@ -1,9 +1,10 @@
-from main import app
-from flask import request, redirect, url_for, render_template
+from flask import request, redirect, url_for, render_template, Blueprint
 from main import db
 from models.menu import Menu
 from models.menu_item import MenuItem
 
+
+menu_blueprint = Blueprint('menu_blueprint', __name__)
 @app.route('/menu', methods=['GET', 'POST'])
 def menu():
     if request.method == 'POST':
