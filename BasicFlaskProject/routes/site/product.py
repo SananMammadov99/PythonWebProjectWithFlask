@@ -1,4 +1,5 @@
-from app import app,render_template
+from flask import render_template
+from app import app
 from models import Product
 
 @app.route('/product')

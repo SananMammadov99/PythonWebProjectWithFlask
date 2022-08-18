@@ -8,9 +8,9 @@
 </head>
 <body>
     <h1>Product detail</h1>
-    <a href="{{ url_for('admin.product_create') }}">Create</a>
-    <a href="{{ url_for('admin.product_edit', id=product.id) }}">Edit</a>
-    <a href="{{ url_for('admin.product_delete', id=product.id) }}">Delete</a>
+    <a href="{{ url_for('product_create') }}">Create</a>
+    <a href="{{ url_for('product_edit', id=product.id) }}">Edit</a>
+    <a href="{{ url_for('product_delete', id=product.id) }}">Delete</a>
     <table>
         <tr>
             <th>ID</th>

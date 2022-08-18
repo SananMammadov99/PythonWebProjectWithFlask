@@ -8,17 +8,17 @@
 </head>
 <body>
     <h1>Product update</h1>
-    <form action="{{ url_for('admin.product_update', id=product.id) }}" method="post">
+    <form action="{{ url_for('product_edit', id=product.id) }}" method="post">
         <input type="hidden" name="_method" value="PUT">
         <input type="hidden" name="_token" value="{{ csrf_token }}">
         <table>
             <tr>
                 <td>Name</td>
-                <td><input type="text" name="name" value="{{ product.name }}"></td>
+                <td><input type="text" name="productName" value="{{ product.productName }}"></td>
             </tr>
             <tr>
                 <td>Price</td>
-                <td><input type="text" name="price" value="{{ product.price }}"></td>
+                <td><input type="text" name="productPrice" value="{{ product.productPrice }}"></td>
             </tr>
             <tr>
                 <td></td>

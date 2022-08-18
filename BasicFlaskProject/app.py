@@ -7,6 +7,11 @@ db=SQLAlchemy(app)
 migrate=Migrate(app,db)
 
 
+from routes.admin.product import *
+from routes.admin.orders import *
+
+from routes.site.product import *
+
 
 if __name__ == '__main__':
     #DEBUG is SET to TRUE. CHANGE FOR PROD

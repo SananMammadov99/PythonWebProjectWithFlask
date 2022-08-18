@@ -1,12 +1,13 @@
-from app import app,db,migrate,request,redirect,url_for,flash,render_template
+from flask import request,redirect,url_for,flash,render_template
+from app import app,db,migrate
 from models import Product
 
 
 @app.route('/admin/product/add',methods=['GET','POST'])
-def add_product():
+def product_create():
     if request.method=='POST':
-        productName=request.form['productName']
-        productPrice=request.form['productPrice']
+        productName=request.form['name']
+        productPrice=request.form['price']
         product=Product(productName=productName,productPrice=productPrice)
         db.session.add(product)
         db.session.commit()
@@ -15,7 +16,7 @@ def add_product():
 
 
 @app.route('/admin/product/edit/<int:id>',methods=['GET','POST'])
-def edit_product(id):
+def product_edit(id):
     product=Product.query.get(id)
     if request.method=='POST':
         product.productName=request.form['productName']
@@ -25,7 +26,7 @@ def edit_product(id):
     return render_template('admin/product/edit.html',product=product)
 
 @app.route('/admin/product/delete/<int:id>',methods=['GET','POST'])
-def delete_product(id):
+def product_delete(id):
     product=Product.query.get(id)
     db.session.delete(product)
     db.session.commit()
@@ -35,7 +36,7 @@ def delete_product(id):
 @app.route('/admin/product')
 def admin_product():
     products=Product.query.all()
-    return render_template('admin/product/index.html',products=products)
+    return render_template('admin/product/list.html',products=products)
 
 
 @app.route('/admin/product/<int:id>')
