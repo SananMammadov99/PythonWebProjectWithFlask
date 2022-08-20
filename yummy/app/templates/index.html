@@ -10,8 +10,8 @@
   <meta content="" name="keywords">
 
   <!-- Favicons -->
-  <link href="static/assets/img/favicon.png" rel="icon">
-  <link href="static/assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+  <link href="app/static/assets/img/favicon.png" rel="icon">
+  <link href="app/static/assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -21,14 +21,14 @@
     rel="stylesheet">
 
   <!-- Vendor CSS Files -->
-  <link href="static/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="static/assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <link href="static/assets/vendor/aos/aos.css" rel="stylesheet">
-  <link href="static/assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-  <link href="static/assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <link href="app/static/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="app/static/assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="app/static/assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="app/static/assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="app/static/assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
 
   <!-- Template Main CSS File -->
-  <link href="static/assets/css/main.css" rel="stylesheet">
+  <link href="app/static/assets/css/main.css" rel="stylesheet">
 
   <!-- =======================================================
   * Template Name: Yummy - v1.1.0
@@ -46,7 +46,7 @@
 
       <a href="index.html" class="logo d-flex align-items-center me-auto me-lg-0">
         <!-- Uncomment the line below if you also wish to use an image logo -->
-        <!-- <img src="static/assets/img/logo.png" alt=""> -->
+        <!-- <img src="app/static/assets/img/logo.png" alt=""> -->
         <h1>Yummy<span>.</span></h1>
       </a>
 
@@ -105,7 +105,7 @@
           </div>
         </div>
         <div class="col-lg-5 order-1 order-lg-2 text-center text-lg-start">
-          <img src="static/assets/img/hero-img.png" class="img-fluid" alt="" data-aos="zoom-out" data-aos-delay="300">
+          <img src="app/static/assets/img/hero-img.png" class="img-fluid" alt="" data-aos="zoom-out" data-aos-delay="300">
         </div>
       </div>
     </div>
@@ -123,7 +123,7 @@
         </div>
 
         <div class="row gy-4">
-          <div class="col-lg-7 position-relative about-img" style="background-image: url(static/assets/img/about.jpg) ;"
+          <div class="col-lg-7 position-relative about-img" style="background-image: url(app/static/assets/img/about.jpg) ;"
             data-aos="fade-up" data-aos-delay="150">
             <div class="call-us position-absolute">
               <h4>Book a Table</h4>
@@ -151,7 +151,7 @@
               </p>
 
               <div class="position-relative mt-4">
-                <img src="static/assets/img/about-2.jpg" class="img-fluid" alt="">
+                <img src="app/static/assets/img/about-2.jpg" class="img-fluid" alt="">
                 <a href="https://www.youtube.com/watch?v=LXb3EKWsInQ" class="glightbox play-btn"></a>
               </div>
             </div>
@@ -299,8 +299,8 @@
               {% for menu_item in menu_items %}
               {% if menu.id == menu_item.menu_id %}
               <div class="col-lg-4 menu-item">
-                <a href="/static/uploads/{{menu_item.image}}" class="glightbox"><img
-                    src="/static/uploads/{{menu_item.image}}" class="menu-img img-fluid" alt=""></a>
+                <a href="/app/static/uploads/{{menu_item.image}}" class="glightbox"><img
+                    src="/app/static/uploads/{{menu_item.image}}" class="menu-img img-fluid" alt=""></a>
                 <h4>{{menu_item.name}}</h4>
                 <p class="ingredients">
                   {{menu_item.ingredients}}
@@ -354,7 +354,7 @@
                     </div>
                   </div>
                   <div class="col-lg-2 text-center">
-                    <img src="static/assets/img/testimonials/testimonials-1.jpg" class="img-fluid testimonial-img"
+                    <img src="app/static/assets/img/testimonials/testimonials-1.jpg" class="img-fluid testimonial-img"
                       alt="">
                   </div>
                 </div>
@@ -381,7 +381,7 @@
                     </div>
                   </div>
                   <div class="col-lg-2 text-center">
-                    <img src="static/assets/img/testimonials/testimonials-2.jpg" class="img-fluid testimonial-img"
+                    <img src="app/static/assets/img/testimonials/testimonials-2.jpg" class="img-fluid testimonial-img"
                       alt="">
                   </div>
                 </div>
@@ -408,7 +408,7 @@
                     </div>
                   </div>
                   <div class="col-lg-2 text-center">
-                    <img src="static/assets/img/testimonials/testimonials-3.jpg" class="img-fluid testimonial-img"
+                    <img src="app/static/assets/img/testimonials/testimonials-3.jpg" class="img-fluid testimonial-img"
                       alt="">
                   </div>
                 </div>
@@ -436,7 +436,7 @@
                     </div>
                   </div>
                   <div class="col-lg-2 text-center">
-                    <img src="static/assets/img/testimonials/testimonials-4.jpg" class="img-fluid testimonial-img"
+                    <img src="app/static/assets/img/testimonials/testimonials-4.jpg" class="img-fluid testimonial-img"
                       alt="">
                   </div>
                 </div>
@@ -463,7 +463,7 @@
           <div class="swiper-wrapper">
 
             <div class="swiper-slide event-item d-flex flex-column justify-content-end"
-              style="background-image: url(static/assets/img/events-1.jpg)">
+              style="background-image: url(app/static/assets/img/events-1.jpg)">
               <h3>Custom Parties</h3>
               <div class="price align-self-start">$99</div>
               <p class="description">
@@ -473,7 +473,7 @@
             </div><!-- End Event item -->
 
             <div class="swiper-slide event-item d-flex flex-column justify-content-end"
-              style="background-image: url(static/assets/img/events-2.jpg)">
+              style="background-image: url(app/static/assets/img/events-2.jpg)">
               <h3>Private Parties</h3>
               <div class="price align-self-start">$289</div>
               <p class="description">
@@ -483,7 +483,7 @@
             </div><!-- End Event item -->
 
             <div class="swiper-slide event-item d-flex flex-column justify-content-end"
-              style="background-image: url(static/assets/img/events-3.jpg)">
+              style="background-image: url(app/static/assets/img/events-3.jpg)">
               <h3>Birthday Parties</h3>
               <div class="price align-self-start">$499</div>
               <p class="description">
@@ -513,7 +513,7 @@
           <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="100">
             <div class="chef-member">
               <div class="member-img">
-                <img src="static/assets/img/chefs/chefs-1.jpg" class="img-fluid" alt="">
+                <img src="app/static/assets/img/chefs/chefs-1.jpg" class="img-fluid" alt="">
                 <div class="social">
                   <a href=""><i class="bi bi-twitter"></i></a>
                   <a href=""><i class="bi bi-facebook"></i></a>
@@ -533,7 +533,7 @@
           <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="200">
             <div class="chef-member">
               <div class="member-img">
-                <img src="static/assets/img/chefs/chefs-2.jpg" class="img-fluid" alt="">
+                <img src="app/static/assets/img/chefs/chefs-2.jpg" class="img-fluid" alt="">
                 <div class="social">
                   <a href=""><i class="bi bi-twitter"></i></a>
                   <a href=""><i class="bi bi-facebook"></i></a>
@@ -553,7 +553,7 @@
           <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="300">
             <div class="chef-member">
               <div class="member-img">
-                <img src="static/assets/img/chefs/chefs-3.jpg" class="img-fluid" alt="">
+                <img src="app/static/assets/img/chefs/chefs-3.jpg" class="img-fluid" alt="">
                 <div class="social">
                   <a href=""><i class="bi bi-twitter"></i></a>
                   <a href=""><i class="bi bi-facebook"></i></a>
@@ -586,7 +586,7 @@
 
         <div class="row g-0">
 
-          <div class="col-lg-4 reservation-img" style="background-image: url(static/assets/img/reservation.jpg);"
+          <div class="col-lg-4 reservation-img" style="background-image: url(app/static/assets/img/reservation.jpg);"
             data-aos="zoom-out" data-aos-delay="200"></div>
 
           <div class="col-lg-8 d-flex align-items-center reservation-form-bg">
@@ -655,28 +655,28 @@
         <div class="gallery-slider swiper">
           <div class="swiper-wrapper align-items-center">
             <div class="swiper-slide"><a class="glightbox" data-gallery="images-gallery"
-                href="static/assets/img/gallery/gallery-1.jpg"><img src="static/assets/img/gallery/gallery-1.jpg"
+                href="app/static/assets/img/gallery/gallery-1.jpg"><img src="app/static/assets/img/gallery/gallery-1.jpg"
                   class="img-fluid" alt=""></a></div>
             <div class="swiper-slide"><a class="glightbox" data-gallery="images-gallery"
-                href="static/assets/img/gallery/gallery-2.jpg"><img src="static/assets/img/gallery/gallery-2.jpg"
+                href="app/static/assets/img/gallery/gallery-2.jpg"><img src="app/static/assets/img/gallery/gallery-2.jpg"
                   class="img-fluid" alt=""></a></div>
             <div class="swiper-slide"><a class="glightbox" data-gallery="images-gallery"
-                href="static/assets/img/gallery/gallery-3.jpg"><img src="static/assets/img/gallery/gallery-3.jpg"
+                href="app/static/assets/img/gallery/gallery-3.jpg"><img src="app/static/assets/img/gallery/gallery-3.jpg"
                   class="img-fluid" alt=""></a></div>
             <div class="swiper-slide"><a class="glightbox" data-gallery="images-gallery"
-                href="static/assets/img/gallery/gallery-4.jpg"><img src="static/assets/img/gallery/gallery-4.jpg"
+                href="app/static/assets/img/gallery/gallery-4.jpg"><img src="app/static/assets/img/gallery/gallery-4.jpg"
                   class="img-fluid" alt=""></a></div>
             <div class="swiper-slide"><a class="glightbox" data-gallery="images-gallery"
-                href="static/assets/img/gallery/gallery-5.jpg"><img src="static/assets/img/gallery/gallery-5.jpg"
+                href="app/static/assets/img/gallery/gallery-5.jpg"><img src="app/static/assets/img/gallery/gallery-5.jpg"
                   class="img-fluid" alt=""></a></div>
             <div class="swiper-slide"><a class="glightbox" data-gallery="images-gallery"
-                href="static/assets/img/gallery/gallery-6.jpg"><img src="static/assets/img/gallery/gallery-6.jpg"
+                href="app/static/assets/img/gallery/gallery-6.jpg"><img src="app/static/assets/img/gallery/gallery-6.jpg"
                   class="img-fluid" alt=""></a></div>
             <div class="swiper-slide"><a class="glightbox" data-gallery="images-gallery"
-                href="static/assets/img/gallery/gallery-7.jpg"><img src="static/assets/img/gallery/gallery-7.jpg"
+                href="app/static/assets/img/gallery/gallery-7.jpg"><img src="app/static/assets/img/gallery/gallery-7.jpg"
                   class="img-fluid" alt=""></a></div>
             <div class="swiper-slide"><a class="glightbox" data-gallery="images-gallery"
-                href="static/assets/img/gallery/gallery-8.jpg"><img src="static/assets/img/gallery/gallery-8.jpg"
+                href="app/static/assets/img/gallery/gallery-8.jpg"><img src="app/static/assets/img/gallery/gallery-8.jpg"
                   class="img-fluid" alt=""></a></div>
           </div>
           <div class="swiper-pagination"></div>
@@ -849,15 +849,15 @@
   <div id="preloader"></div>
 
   <!-- Vendor JS Files -->
-  <script src="static/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="static/assets/vendor/aos/aos.js"></script>
-  <script src="static/assets/vendor/glightbox/js/glightbox.min.js"></script>
-  <script src="static/assets/vendor/purecounter/purecounter_vanilla.js"></script>
-  <script src="static/assets/vendor/swiper/swiper-bundle.min.js"></script>
-  <script src="static/assets/vendor/php-email-form/validate.js"></script>
+  <script src="app/static/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="app/static/assets/vendor/aos/aos.js"></script>
+  <script src="app/static/assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="app/static/assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="app/static/assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="app/static/assets/vendor/php-email-form/validate.js"></script>
 
   <!-- Template Main JS File -->
-  <script src="static/assets/js/main.js"></script>
+  <script src="app/static/assets/js/main.js"></script>
 
 </body>
 
