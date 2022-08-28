@@ -296,17 +296,17 @@
             </div>
 
             <div class="row gy-5">
-              {% for menu_item in menu_items %}
-              {% if menu.id == menu_item.menu_id %}
+              {% for food in foods %}
+              {% if menu.id == food.menu_id %}
               <div class="col-lg-4 menu-item">
-                <a href="/app/static/uploads/{{menu_item.image}}" class="glightbox"><img
-                    src="/app/static/uploads/{{menu_item.image}}" class="menu-img img-fluid" alt=""></a>
-                <h4>{{menu_item.name}}</h4>
+                <a href="/uploads/{{food.image_url}}" class="glightbox"><img
+                    src="/uploads/{{food.image_url}}" class="menu-img img-fluid" alt=""></a>
+                <h4>{{food.title}}</h4>
                 <p class="ingredients">
-                  {{menu_item.ingredients}}
+                  {{food.ingredients}}
                 </p>
                 <p class="price">
-                  ${{menu_item.price}}
+                  ${{food.price}}
                 </p>
               </div>
               {% endif %}

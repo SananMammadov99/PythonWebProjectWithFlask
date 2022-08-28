@@ -1,32 +1,36 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    {% if message %}
-        <p>{{ message }}</p>
-        <br/>
-    {% endif %}
-    
-    <form action="" method="post">
-        <input type="text" name="name" placeholder="Menu adı">
-        <input type="submit" value="Yarat">
-    </form>
-    <h3>Menüler</h3>
+{% extends 'base.html' %}
 
-    <ul>
-    {% for menu in menus %}
+{% block main%}
 
-            <li>{{ menu.name }}     <a href="/menu/{{menu.id}}/menu_item"> All items</a>  >  
-                <a href="/menu/{{menu.id}}/menu_item/new" style="color: green;"> New</a> > 
-                <a style="color: red;" href="/menu/{{menu.id}}/delete">Delete</a>
-            </li>
+<form action="{{ url_for('admin.admin_add_menu')}}" method="post">
+    <div class="form-group">
+      <label for="meunInput"> Menu</label>
+      {{ form.name(class='form-control') }}
+    </div>
+    {{ form.csrf_token }}
+    {{ form.submit(class='btn btn-primary') }}
+</form>
 
-    {% endfor %}
-    </ul>
-</body>
-</html>
+<div class="table-responsive">
+
+
+    <table class="table">
+        <tr>
+            <th>Menu</th>
+            <th>Actions</th>
+        </tr>
+        {% for menu in menus %}
+        <tr>
+            <td>{{ menu.name }}</td>
+            <td>
+                
+                <a href="{{ url_for('admin.admin_food', id=menu.id) }}" class="btn btn-primary">Foods</a>
+                <a href="{{ url_for('admin.admin_edit_menu', id=menu.id) }}" class="btn btn-secondary">Edit</a>
+                <a href="{{ url_for('admin.admin_delete_menu', id=menu.id) }}" class="btn btn-danger">Delete</a>
+            </td>
+        </tr>
+        {% endfor %}
+    </table>
+</div>
+
+{% endblock%}
